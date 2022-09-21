@@ -22,7 +22,7 @@ func ussd_callback(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(session_id, service_code, phone_number)
 	text := r.FormValue("text")
 	if len(text) == 0 {
-		w.Write([]byte("Welcome to Ethio Ekub \n Choose your Action \n 1. Login \n 2. signup \n 3. info	 "))
+		w.Write([]byte("Welcome to Ethio Ekub \n Choose your Actions \n 1. Login \n 2. signup \n 3. info	 "))
 	} else {
 		switch text {
 		case "1":
