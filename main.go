@@ -13,7 +13,7 @@ func test(w http.ResponseWriter, r *http.Request) {
 }
 
 func ussd_callback(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("content-type", "application/json")
+	w.Header().Set("content-type", "text/plain")
 
 	session_id := r.FormValue("sessionId")
 	service_code := r.FormValue("serviceCode")
